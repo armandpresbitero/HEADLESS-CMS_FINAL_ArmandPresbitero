@@ -3,31 +3,63 @@ const titleEl = document.getElementById('page-title');
 const subtitleEl = document.getElementById('page-subtitle');
 const filterEl = document.getElementById('brand-filter');
 
-let carData = [];
+// 1. JSON string (like from a file or API)
+const jsonString = `
+{
+  "header": {
+    "title": "Top Car Models",
+    "subtitle": "Explore popular cars by brand"
+  },
+  "cars": [
+    {
+      "model": "Civic",
+      "brand": "Honda",
+      "description": "Reliable, fuel-efficient sedan with sporty handling.",
+      "image": "assets/images/civic.jpg"
+    },
+    {
+      "model": "Corolla",
+      "brand": "Toyota",
+      "description": "Compact sedan with top safety features and comfort.",
+      "image": "assets/images/corolla.jpg"
+    },
+    {
+      "model": "Model 3",
+      "brand": "Tesla",
+      "description": "Electric sedan with fast acceleration and autopilot.",
+      "image": "assets/images/model3.jpg"
+    },
+    {
+      "model": "Mustang",
+      "brand": "Ford",
+      "description": "Classic American muscle car with iconic design.",
+      "image": "assets/images/mustang.jpg"
+    }
+  ]
+}
+`;
 
-fetch('../public/data.json')
-  .then(response => response.json())
-  .then(data => {
-    // Load header
-    titleEl.textContent = data.header.title;
-    subtitleEl.textContent = data.header.subtitle;
+// 2. Convert string to JavaScript object
+const data = JSON.parse(jsonString);
 
-    // Load cars
-    carData = data.cars;
-    displayCards(carData);
+// 3. Load header content
+titleEl.textContent = data.header.title;
+subtitleEl.textContent = data.header.subtitle;
 
-    // Populate brand filter
-    const brands = [...new Set(data.cars.map(car => car.brand))];
-    brands.forEach(brand => {
-      const option = document.createElement('option');
-      option.value = brand;
-      option.textContent = brand;
-      filterEl.appendChild(option);
-    });
-  })
-  .catch(err => console.error('Error loading JSON:', err));
+// 4. Load cards
+let carData = data.cars;
+displayCards(carData);
 
-// Handle filter
+// 5. Populate dropdown filter
+const brands = [...new Set(carData.map(car => car.brand))];
+brands.forEach(brand => {
+  const option = document.createElement('option');
+  option.value = brand;
+  option.textContent = brand;
+  filterEl.appendChild(option);
+});
+
+// 6. Handle brand filter
 filterEl.addEventListener('change', () => {
   const selected = filterEl.value;
   if (selected === 'all') {
@@ -38,6 +70,7 @@ filterEl.addEventListener('change', () => {
   }
 });
 
+// 7. Display car cards
 function displayCards(cars) {
   container.innerHTML = '';
   cars.forEach(car => {
@@ -46,6 +79,7 @@ function displayCards(cars) {
   });
 }
 
+// 8. Create Bootstrap card
 function createCard(car) {
   const col = document.createElement('div');
   col.className = 'col-md-6 col-lg-4 mb-4';
@@ -53,4 +87,13 @@ function createCard(car) {
   col.innerHTML = `
     <div class="card h-100 shadow">
       <img src="${car.image}" class="card-img-top" alt="${car.model}">
-      <div class="card-body
+      <div class="card-body">
+        <h5 class="card-title">${car.model}</h5>
+        <h6 class="card-subtitle text-muted mb-2">${car.brand}</h6>
+        <p class="card-text">${car.description}</p>
+      </div>
+    </div>
+  `;
+
+  return col;
+}

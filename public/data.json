@@ -1,3 +1,4 @@
+const jsonString = `
 {
   "header": {
     "title": "Top Car Models",
@@ -8,25 +9,26 @@
       "model": "Civic",
       "brand": "Honda",
       "description": "Reliable, fuel-efficient sedan with sporty handling.",
-      "image": "assets/images/civic.jpg"
+      "image": "https://images.unsplash.com/photo-1617294470101-cdd65a0fcff1?auto=format&fit=crop&w=800&q=80"
     },
     {
       "model": "Corolla",
       "brand": "Toyota",
       "description": "Compact sedan with top safety features and comfort.",
-      "image": "assets/images/corolla.jpg"
+      "image": "https://images.unsplash.com/photo-1597001671472-5e876075cc5c?auto=format&fit=crop&w=800&q=80"
     },
     {
       "model": "Model 3",
       "brand": "Tesla",
       "description": "Electric sedan with fast acceleration and autopilot.",
-      "image": "assets/images/model3.jpg"
+      "image": "https://images.unsplash.com/photo-1593941707874-ef25b8f43f1b?auto=format&fit=crop&w=800&q=80"
     },
     {
       "model": "Mustang",
       "brand": "Ford",
       "description": "Classic American muscle car with iconic design.",
-      "image": "assets/images/mustang.jpg"
+      "image": "https://images.unsplash.com/photo-1610135058854-4481b2248570?auto=format&fit=crop&w=800&q=80"
     }
   ]
 }
+`;
