@@ -1,0 +1,194 @@
+$primary-color: #3751FF;
+$secondary-color: #9FA2B4;
+$background-color: #F7F8FC;
+$border-color: #DFE0EB;
+$hover-bg-color: #3e4049;
+$warning-color: #FEC400;
+$success-color: #29CC97;
+
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: $background-color;
+}
+
+#sidebar {
+  min-width: 255px;
+  max-width: 255px;
+  min-height: 100vh;
+  transition: all 0.3s;
+
+  .sidebar-header {
+    padding: 20px;
+  }
+
+  ul.components {
+    padding: 20px 0;
+  }
+
+  ul {
+    p {
+      color: #fff;
+      padding: 10px;
+    }
+
+    li {
+      a {
+        padding: 10px 35px;
+        font-size: 1.1em;
+        display: block;
+        color: $secondary-color;
+        text-decoration: none;
+        border-left: 3px solid transparent;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #fff;
+          background: $hover-bg-color;
+          border-left: 3px solid #fff !important;
+        }
+      }
+    }
+  }
+}
+
+.logo-container {
+  width: 32px;
+  height: 32px;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.card {
+  border: 1px solid $border-color;
+  border-radius: 8px;
+
+  &-title {
+    color: #252733;
+    font-size: 19px;
+    font-weight: bold;
+    letter-spacing: 0.4px;
+  }
+
+  &-subtitle {
+    margin-bottom: 0;
+    font-size: 12px;
+    color: $secondary-color;
+  }
+
+  &-text {
+    color: #252733;
+    font-weight: bold;
+  }
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+  font-size: 19px;
+  color: $secondary-color;
+}
+
+.navbar {
+  &-brand {
+    color: #252733;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.3px;
+  }
+
+  .nav-link {
+    color: #C5C7CD;
+  }
+}
+
+.badge {
+  font-weight: 600;
+  padding: 5px 12px;
+}
+
+#avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  border: 4px solid white;
+  outline: 1.5px solid $border-color;
+  border-radius: 50%;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 0;
+  border-bottom: 1px solid $border-color;
+  margin: 0 -40px;
+  padding-left: 40px;
+  padding-right: 30px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.form-check-input {
+  &[type=checkbox] {
+    border-radius: 50px;
+  }
+
+  &:checked {
+    background-color: $primary-color;
+    border-color: $primary-color;
+  }
+}
+
+.bg-primary {
+  background-color: $primary-color !important;
+}
+
+.text-primary {
+  color: $primary-color !important;
+}
+
+.bg-warning {
+  background-color: $warning-color !important;
+}
+
+.bg-success {
+  background-color: $success-color !important;
+}
+
+li {
+  span {
+    &.text-light-gray {
+      color: $secondary-color !important;
+    }
+    &.text-create-task {
+      color: #C5C7CD !important;
+    }
+  }
+}
+
+.responsive-svg-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+
+  svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+    &.active {
+      margin-left: 0;
+    }
+  }
+}

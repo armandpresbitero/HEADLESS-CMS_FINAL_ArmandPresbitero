@@ -1,0 +1,14 @@
+[
+    {
+      "name": "Sofia Ahmed",
+      "title": "Immigrant Storyteller",
+      "bio": "Sofia documents personal stories of newcomers adjusting to life in a new country.",
+      "image": "assets/images/sofia.jpg"
+    },
+    {
+      "name": "Tariq El-Masri",
+      "title": "Legal Aid Volunteer",
+      "bio": "Tariq helps refugees navigate legal systems and access immigration services.",
+      "image": "assets/images/tariq.jpg"
+    }
+  ]

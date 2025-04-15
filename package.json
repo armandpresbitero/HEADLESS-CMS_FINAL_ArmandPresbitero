@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  },
+  "name": "headless-cms_final_armandpresbitero",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "start": "lite-server --baseDir=\"public\"",   
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

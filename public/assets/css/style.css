@@ -1,0 +1,174 @@
+body {
+  font-family: "Mulish", sans-serif;
+  background-color: #F7F8FC;
+}
+
+#sidebar {
+  min-width: 255px;
+  max-width: 255px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+#sidebar .sidebar-header {
+  padding: 20px;
+}
+#sidebar ul.components {
+  padding: 20px 0;
+}
+#sidebar ul p {
+  color: #fff;
+  padding: 10px;
+}
+#sidebar ul li a {
+  padding: 10px 35px;
+  font-size: 1.1em;
+  display: block;
+  color: #f4f5f9;
+  text-decoration: none;
+  border-left: 3px solid transparent;
+  transition: all 0.3s;
+}
+#sidebar ul li a:hover {
+  color: #fff;
+  background: #3e4049;
+  border-left: 3px solid !important;
+  opacity: 1 !important;
+}
+
+.logo-container {
+  width: 32px;
+  height: 32px;
+}
+
+#content {
+  width: 100%;
+  padding: 20px;
+  min-height: 100vh;
+  transition: all 0.3s;
+}
+
+.card {
+  border: 1px solid #DFE0EB;
+  border-radius: 8px;
+}
+.card-title {
+  color: #252733;
+  font-size: 19px;
+  font-weight: bold;
+  letter-spacing: 0.4px;
+}
+.card-subtitle {
+  margin-bottom: 0;
+  font-size: 12px;
+  color: #9FA2B4;
+}
+.card-text {
+  color: #252733;
+  font-weight: bold;
+}
+
+.text-icon-color,
+.text-icon-color i {
+  color: #C5C7CD !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+  font-size: 18px;
+  font-weight: 700;
+  color: #A4A6B3;
+}
+
+.navbar-brand {
+  color: #252733;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+.navbar .nav-link {
+  color: #C5C7CD;
+}
+
+.badge {
+  font-weight: 600;
+  padding: 5px 12px;
+}
+
+#avatar {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  display: inline-block;
+  vertical-align: middle;
+  border: 4px solid white;
+  outline: 1.5px solid #DFE0EB;
+  border-radius: 50%;
+}
+
+.list-group-item {
+  border: none;
+  padding: 20px 0;
+  border-bottom: 1px solid #DFE0EB;
+  margin: 0 -40px;
+  padding-left: 40px;
+  padding-right: 30px;
+}
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.form-check-input[type=checkbox] {
+  border-radius: 50px;
+}
+.form-check-input:checked {
+  background-color: #3751FF;
+  border-color: #3751FF;
+}
+
+.bg-primary {
+  background-color: #3751FF !important;
+}
+
+.text-primary {
+  color: #3751FF !important;
+}
+
+.bg-warning {
+  background-color: #FEC400 !important;
+}
+
+.bg-success {
+  background-color: #29CC97 !important;
+}
+
+li span.text-light-gray {
+  color: #9FA2B4 !important;
+}
+li span.text-create-task {
+  color: #C5C7CD !important;
+}
+
+.responsive-svg-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+.responsive-svg-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  #sidebar {
+    margin-left: -250px;
+  }
+  #sidebar.active {
+    margin-left: 0;
+  }
+  .responsive-svg-container {
+    padding-right: 0 !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
