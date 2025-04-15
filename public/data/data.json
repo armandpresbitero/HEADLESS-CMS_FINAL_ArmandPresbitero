@@ -1,4 +1,3 @@
-const jsonString = `
 {
   "header": {
     "title": "Top Car Models",
@@ -31,4 +30,3 @@ const jsonString = `
     }
   ]
 }
-`;
