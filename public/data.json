@@ -1,14 +1,32 @@
-[
+{
+  "header": {
+    "title": "Top Car Models",
+    "subtitle": "Explore popular cars by brand"
+  },
+  "cars": [
     {
-      "name": "Sofia Ahmed",
-      "title": "Immigrant Storyteller",
-      "bio": "Sofia documents personal stories of newcomers adjusting to life in a new country.",
-      "image": "assets/images/sofia.jpg"
+      "model": "Civic",
+      "brand": "Honda",
+      "description": "Reliable, fuel-efficient sedan with sporty handling.",
+      "image": "assets/images/civic.jpg"
     },
     {
-      "name": "Tariq El-Masri",
-      "title": "Legal Aid Volunteer",
-      "bio": "Tariq helps refugees navigate legal systems and access immigration services.",
-      "image": "assets/images/tariq.jpg"
+      "model": "Corolla",
+      "brand": "Toyota",
+      "description": "Compact sedan with top safety features and comfort.",
+      "image": "assets/images/corolla.jpg"
+    },
+    {
+      "model": "Model 3",
+      "brand": "Tesla",
+      "description": "Electric sedan with fast acceleration and autopilot.",
+      "image": "assets/images/model3.jpg"
+    },
+    {
+      "model": "Mustang",
+      "brand": "Ford",
+      "description": "Classic American muscle car with iconic design.",
+      "image": "assets/images/mustang.jpg"
     }
   ]
+}
